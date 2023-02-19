@@ -2,6 +2,8 @@ import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'
 import vercelLogo from "assets/vercel.svg";
+import { Button } from 'components/buttons/Button';
+
 
 const Home: NextPage = () => {
   return (

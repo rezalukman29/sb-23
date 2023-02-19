@@ -1,18 +1,21 @@
 {
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p",
     "build": "next build",
     "start": "next start",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook"
   },
   "dependencies": {
+    "@storybook/addon-knobs": "^6.4.0",
+    "clsx": "^1.2.1",
     "next": "latest",
     "postcss-loader": "^7.0.2",
     "react": "18.1.0",
     "react-dom": "18.1.0",
-    "storybook-addon-next": "^1.6.7"
+    "storybook-addon-next": "^1.6.7",
+    "tailwind-merge": "^1.9.1"
   },
   "devDependencies": {
     "@babel/core": "^7.18.13",
