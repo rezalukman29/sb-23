@@ -29,15 +29,15 @@ Secondary.args = {
   label: 'Button',
 };
 
-export const Primary_Outlined = Template.bind({});
-Primary_Outlined.args = {
-  variant: 'primary-outlined',
+export const Link = Template.bind({});
+Link.args = {
+  variant: 'link',
   label: 'Button',
 };
 
-export const Secondary_Outlined = Template.bind({});
-Secondary_Outlined.args = {
-  variant: 'secondary-outlined',
+export const Icon = Template.bind({});
+Icon.args = {
+  variant: 'icon',
   label: 'Button',
 };
 

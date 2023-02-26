@@ -17,14 +17,20 @@
   box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 0px 1px inset;
 }
 .storybook-button--small {
-  font-size: 12px;
-  padding: 10px 16px;
+  border-radius: 4px;
+  font-weight: 500;
+  font-size: 14px;
+  padding: 8px;
 }
 .storybook-button--medium {
+  border-radius: 6px;
+  font-weight: 500;
   font-size: 14px;
-  padding: 11px 20px;
+  padding: 10px 12px;
 }
 .storybook-button--large {
+  border-radius: 8px;
+  font-weight: 500;
   font-size: 16px;
-  padding: 12px 24px;
+  padding: 12px 20px;
 }

@@ -1,3 +1,4 @@
+import Icon from 'components/icon';
 import clsxm from 'lib/clsxm';
 import React from 'react';
 import './button.css';
@@ -6,7 +7,7 @@ interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
    */
-  variant?: 'primary' | 'secondary' | 'primary-outlined' | 'secondary-outlined';
+  variant?: 'primary' | 'secondary' | 'link' | 'icon';
   /**
    * What background color to use
    */
@@ -42,31 +43,33 @@ export const Button = ({
   isDisabled = false,
   ...props
 }: ButtonProps) => {
+  const isIcon = variant === 'link';
   const variants = variant === 'primary' ? clsxm([
-    !isDisabled ? 'bg-primary text-white' : 'bg-disabled text-textDisabled',
+    !isDisabled ? 'hover:bg-primary-60 bg-primary text-white' : 'bg-white-40 text-black-20',
   ]) :
   variant === 'secondary' ? clsxm([
-    !isDisabled ? 'bg-secondary text-white' : 'bg-disabled text-textDisabled',
+    !isDisabled ? 'bg-white hover:bg-primary text-primary hover:text-white border-[1.5px] border-solid border-primary' : 'bg-white text-black-20 border-[1.5px] border-solid border-white-40',
   ]) :
-  variant === 'primary-outlined' ? clsxm([
-    !isDisabled ? 'bg-white text-primary border border-solid border-primary' : 'bg-disabled text-textDisabled',
+  variant === 'link' ? clsxm([
+    !isDisabled ? 'bg-white hover:bg-primary-5 text-primary' : 'bg-white text-black-20',
   ]) :
-  variant === 'secondary-outlined' && clsxm([
-    !isDisabled ? 'bg-white text-secondary border border-solid border-secondary' : 'bg-disabled text-textDisabled',
+  variant === 'icon' && clsxm([
+    !isDisabled ? 'bg-white text-secondary border border-solid border-secondary' : 'bg-white-40 text-textDisabled',
   ])
   return (
     <button
       type="button"
       className={[clsxm(
-        'button inline-flex items-center justify-center font-semibold',
-        'rounded',
+        'button inline-flex items-center justify-center',
         isDisabled ? 'cursor-not-allowed' : 'cursor-pointer',
-        'focus:outline-none focus-visible:ring focus-visible:ring-primary-500',
+        isIcon && 'gap-[9px]',
         'transition duration-100'), `storybook-button--${size}`, variants].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >
+      {isIcon && <Icon icon="link" color='currentColor'/>}
       {label}
+      {isIcon && <Icon icon="link" color='currentColor'/>}
     </button>
   );
 };
