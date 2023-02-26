@@ -3,6 +3,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import vercelLogo from "assets/vercel.svg";
 import { Button } from 'components/buttons/Button';
+import { Text } from 'components/typograph/Text';
 
 
 const Home: NextPage = () => {
@@ -34,6 +35,7 @@ const Home: NextPage = () => {
             className="mt-6 w-96 rounded-xl border p-6 text-left hover:text-blue-600 focus:text-blue-600"
           >
             <h3 className="text-2xl font-bold">Documentation &rarr;</h3>
+            <Text variant='title' label='title' color='red' textAlign='center' fontWeight='light'/>
             <p className="mt-4 text-xl">
               Find in-depth information about Next.js features and its API.
             </p>
