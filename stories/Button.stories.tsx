@@ -35,9 +35,15 @@ Link.args = {
   label: 'Button',
 };
 
-export const Icon = Template.bind({});
-Icon.args = {
-  variant: 'icon',
+export const Icon_Primary = Template.bind({});
+Icon_Primary.args = {
+  variant: 'icon-primary',
+  label: 'Button',
+};
+
+export const Icon_Secondary = Template.bind({});
+Icon_Secondary.args = {
+  variant: 'icon-secondary',
   label: 'Button',
 };
 
